@@ -20,3 +20,6 @@ use `find_package(vnm_filesystem_observation CONFIG REQUIRED)`. Both link
 `vnm_qt_dispatch` 2 package or its source checkout.
 
 The implementation and tests originate in Varinomics’ `vnm_framework`.
+See the [repository license](LICENSE) for Varinomics code in this repository
+and the [Qt dispatch notice](notices/vnm_qt_dispatch-BSD-2-Clause.txt) for
+the header-only dependency. Qt is supplied under its own license.

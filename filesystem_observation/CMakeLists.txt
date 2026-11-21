@@ -122,8 +122,13 @@ if(VNM_FILESYSTEM_OBSERVATION_ENABLE_TEST_HOOKS)
 endif()
 
 include(CMakePackageConfigHelpers)
+include(GNUInstallDirs)
 install(TARGETS vnm_filesystem_observation EXPORT vnm_filesystem_observation_targets
     ARCHIVE DESTINATION lib)
+install(FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/../LICENSE"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../notices/vnm_qt_dispatch-BSD-2-Clause.txt"
+    DESTINATION "${CMAKE_INSTALL_DATADIR}/licenses/vnm_filesystem_observation")
 install(FILES
     vnm_filesystem_observation.h
     vnm_filesystem_observation_qt.h

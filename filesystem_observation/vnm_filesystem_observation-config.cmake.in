@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+find_dependency(Qt6 6.12 COMPONENTS Core)
+find_dependency(Threads)
+if(NOT TARGET vnm_qt_dispatch::vnm_qt_dispatch)
+    find_dependency(vnm_qt_dispatch 2 CONFIG)
+endif()
+if(NOT TARGET vnm_framework::vnm_filesystem_observation)
+    include("${CMAKE_CURRENT_LIST_DIR}/vnm_filesystem_observation_targets.cmake")
+endif()
